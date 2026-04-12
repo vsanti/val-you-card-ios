@@ -1,0 +1,10 @@
+// Copy this file to Debug.xcconfig and fill in your values.
+// Debug.xcconfig is gitignored and should never be committed.
+
+API_URL = https://your-deals-api-url.com
+REDEEM_API_URL = https://your-redeem-api-url.com
+STRAPI_URL = https://your-strapi-url.com
+BACKEND_URL = https://your-backend-url.com
+ACCESS_TOKEN = your_access_token
+MEMBER_KEY = your_member_key
+STRIPE_PUBLISHABLE_KEY = pk_test_your_stripe_key

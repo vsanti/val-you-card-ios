@@ -1,0 +1,38 @@
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+xcuserdata/
+
+# Build
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Misc
+*.moved-aside
+*.hmap
+*.xccheckout
+*.xcscmblueprint
+
+# Environment
+*.xcconfig
+!ValYouCard/Resources/Debug.xcconfig.template
+
+# OS
+.DS_Store
