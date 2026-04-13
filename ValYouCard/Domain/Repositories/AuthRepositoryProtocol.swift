@@ -1,6 +1,6 @@
 import Foundation
 
-protocol AuthRepositoryProtocol {
+protocol AuthRepositoryProtocol: Sendable {
     func signIn(email: String, password: String) async throws -> User
     func signUp(request: SignUpRequest) async throws -> User
     func signOut() async

@@ -41,9 +41,9 @@ struct APIRequest {
     var headers: [String: String]?
 }
 
-final class APIClient {
+final class APIClient: Sendable {
     private let session: URLSession
-    private let decoder: JSONDecoder
+    private nonisolated(unsafe) let decoder: JSONDecoder
 
     init(session: URLSession = .shared) {
         self.session = session

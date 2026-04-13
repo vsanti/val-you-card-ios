@@ -20,7 +20,7 @@ struct RedeemDetails: Codable {
     }
 }
 
-protocol RedeemRepositoryProtocol {
+protocol RedeemRepositoryProtocol: Sendable {
     func redeemOffer(offerKey: Int, firstName: String, lastName: String, memberId: String) async throws -> RedeemResponse
     func redeemOfferMethod(offerKey: Int, firstName: String, lastName: String, memberId: String, method: String) async throws -> RedeemResponse
 }

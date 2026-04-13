@@ -1,6 +1,6 @@
 import Foundation
 
-final class RedeemRepository: RedeemRepositoryProtocol {
+final class RedeemRepository: RedeemRepositoryProtocol, @unchecked Sendable {
     private let apiClient: APIClient
 
     init(apiClient: APIClient = APIClient()) {

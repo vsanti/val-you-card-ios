@@ -1,6 +1,6 @@
 import Foundation
 
-final class AuthRepository: AuthRepositoryProtocol {
+final class AuthRepository: AuthRepositoryProtocol, @unchecked Sendable {
     private let apiClient: APIClient
     private let keychain: KeychainManager
 

@@ -1,26 +1,26 @@
 import Foundation
 
-protocol GetAllOffersUseCaseProtocol {
+protocol GetAllOffersUseCaseProtocol: Sendable {
     func execute(query: OffersQuery) async throws -> OffersResponse
 }
 
-protocol GetStoreOffersUseCaseProtocol {
+protocol GetStoreOffersUseCaseProtocol: Sendable {
     func execute(query: StoreOffersQuery) async throws -> OffersResponse
 }
 
-protocol GetNewOffersUseCaseProtocol {
+protocol GetNewOffersUseCaseProtocol: Sendable {
     func execute() async throws -> OffersResponse
 }
 
-protocol GetFeaturedOffersUseCaseProtocol {
+protocol GetFeaturedOffersUseCaseProtocol: Sendable {
     func execute() async throws -> [FeaturedOffer]
 }
 
-protocol GetAutocompleteUseCaseProtocol {
+protocol GetAutocompleteUseCaseProtocol: Sendable {
     func execute(query: String) async throws -> [String]
 }
 
-protocol RedeemOfferUseCaseProtocol {
+protocol RedeemOfferUseCaseProtocol: Sendable {
     func execute(offerKey: Int, user: User) async throws -> String?
 }
 

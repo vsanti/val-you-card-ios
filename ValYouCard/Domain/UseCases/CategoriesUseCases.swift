@@ -1,6 +1,6 @@
 import Foundation
 
-protocol GetCategoriesUseCaseProtocol {
+protocol GetCategoriesUseCaseProtocol: Sendable {
     func execute() async throws -> [Category]
 }
 

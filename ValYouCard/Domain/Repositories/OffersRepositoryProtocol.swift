@@ -19,7 +19,7 @@ struct StoreOffersQuery {
     var locationKey: Int?
 }
 
-protocol OffersRepositoryProtocol {
+protocol OffersRepositoryProtocol: Sendable {
     func getAllOffers(query: OffersQuery) async throws -> OffersResponse
     func getStoreOffers(query: StoreOffersQuery) async throws -> OffersResponse
     func getNewOffers() async throws -> OffersResponse

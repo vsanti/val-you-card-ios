@@ -1,6 +1,6 @@
 import Foundation
 
-final class OffersRepository: OffersRepositoryProtocol {
+final class OffersRepository: OffersRepositoryProtocol, @unchecked Sendable {
     private let apiClient: APIClient
 
     init(apiClient: APIClient = APIClient()) {

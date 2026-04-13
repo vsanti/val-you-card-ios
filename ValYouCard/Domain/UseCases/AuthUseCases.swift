@@ -1,22 +1,22 @@
 import Foundation
 
-protocol SignInUseCaseProtocol {
+protocol SignInUseCaseProtocol: Sendable {
     func execute(email: String, password: String) async throws -> User
 }
 
-protocol SignUpUseCaseProtocol {
+protocol SignUpUseCaseProtocol: Sendable {
     func execute(request: SignUpRequest) async throws -> User
 }
 
-protocol ForgotPasswordUseCaseProtocol {
+protocol ForgotPasswordUseCaseProtocol: Sendable {
     func execute(email: String) async throws -> String
 }
 
-protocol GetProfileUseCaseProtocol {
+protocol GetProfileUseCaseProtocol: Sendable {
     func execute() async throws -> User
 }
 
-protocol ChangePasswordUseCaseProtocol {
+protocol ChangePasswordUseCaseProtocol: Sendable {
     func execute(currentPassword: String, newPassword: String) async throws -> String
 }
 

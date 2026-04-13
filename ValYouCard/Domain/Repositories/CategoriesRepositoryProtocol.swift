@@ -1,5 +1,5 @@
 import Foundation
 
-protocol CategoriesRepositoryProtocol {
+protocol CategoriesRepositoryProtocol: Sendable {
     func getCategories() async throws -> CategoriesResponse
 }

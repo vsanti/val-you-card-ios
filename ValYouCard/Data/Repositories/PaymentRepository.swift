@@ -1,6 +1,6 @@
 import Foundation
 
-final class PaymentRepository: PaymentRepositoryProtocol {
+final class PaymentRepository: PaymentRepositoryProtocol, @unchecked Sendable {
     private let apiClient: APIClient
     private let keychain: KeychainManager
 

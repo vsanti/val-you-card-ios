@@ -1,6 +1,6 @@
 import Foundation
 
-final class CategoriesRepository: CategoriesRepositoryProtocol {
+final class CategoriesRepository: CategoriesRepositoryProtocol, @unchecked Sendable {
     private let apiClient: APIClient
 
     init(apiClient: APIClient = APIClient()) {
