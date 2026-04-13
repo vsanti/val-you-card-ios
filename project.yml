@@ -12,6 +12,9 @@ settings:
     MARKETING_VERSION: "1.0.0"
     CURRENT_PROJECT_VERSION: "1"
 
+configFiles:
+  Debug: Debug.xcconfig
+
 targets:
   ValYouCard:
     type: application
@@ -39,3 +42,13 @@ targets:
           - UIInterfaceOrientationPortrait
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
+        API_URL: $(API_URL)
+        REDEEM_API_URL: $(REDEEM_API_URL)
+        STRAPI_URL: $(STRAPI_URL)
+        BACKEND_URL: $(BACKEND_URL)
+        ACCESS_TOKEN: $(ACCESS_TOKEN)
+        MEMBER_KEY: $(MEMBER_KEY)
+        STRIPE_PUBLISHABLE_KEY: $(STRIPE_PUBLISHABLE_KEY)
+        CFBundleURLTypes:
+          - CFBundleURLSchemes:
+              - valyoucard

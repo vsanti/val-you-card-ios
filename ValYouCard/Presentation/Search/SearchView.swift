@@ -134,11 +134,11 @@ struct SearchView: View {
                     viewModel: container.makeDealDetailViewModel(
                         storeKey: String(offer.offerStore.storeKey),
                         storeName: offer.offerStore.name,
-                        locationKey: offer.offerStore.physicalLocation.locationKey
+                        locationKey: offer.offerStore.physicalLocation?.locationKey
                     ),
                     storeName: offer.offerStore.name,
                     logoUrl: offer.logoUrl,
-                    storeDescription: offer.offerStore.description,
+                    storeDescription: offer.offerStore.description ?? "",
                     physicalLocation: offer.offerStore.physicalLocation
                 )
             }

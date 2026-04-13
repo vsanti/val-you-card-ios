@@ -62,6 +62,7 @@
 		10D44F7202F72E3058502093 /* AuthUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCases.swift; sourceTree = "<group>"; };
 		137349CDADE5B4B5953A07CC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		150D76F67CC49B44104AD57C /* OffersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersRepository.swift; sourceTree = "<group>"; };
+		1561AB41FC23AD6683CE11A8 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		1B667B49EC1B0A5FE61EF1FD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		246175DA65FAB3A431167772 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		29CEE0C663EB84CB70F6828E /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
@@ -161,6 +162,15 @@
 				1B667B49EC1B0A5FE61EF1FD /* SignUpView.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		4B0F16B80FE6963C0EC47A70 /* val-you-card-ios */ = {
+			isa = PBXGroup;
+			children = (
+				1561AB41FC23AD6683CE11A8 /* Debug.xcconfig */,
+			);
+			name = "val-you-card-ios";
+			path = .;
 			sourceTree = "<group>";
 		};
 		57B70743726547144FAFD3C3 /* Resources */ = {
@@ -277,6 +287,7 @@
 		DABB6CC958A8EAA5D9710D66 = {
 			isa = PBXGroup;
 			children = (
+				4B0F16B80FE6963C0EC47A70 /* val-you-card-ios */,
 				CED53A2884E99BE7F3770B48 /* ValYouCard */,
 				FBCA3CAED25E10B05D70D859 /* Products */,
 			);
@@ -494,6 +505,7 @@
 		};
 		7CFAD99B85C430D0F62E0F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1561AB41FC23AD6683CE11A8 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
