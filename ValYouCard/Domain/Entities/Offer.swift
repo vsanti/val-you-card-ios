@@ -1,16 +1,32 @@
 import Foundation
 
+struct OfferCategory: Codable, Equatable, Hashable {
+    let categoryName: String
+    let categoryKey: Int
+    let categoryParentName: String?
+    let categoryParentKey: Int?
+    let categoryType: String?
+
+    enum CodingKeys: String, CodingKey {
+        case categoryName = "category_name"
+        case categoryKey = "category_key"
+        case categoryParentName = "category_parent_name"
+        case categoryParentKey = "category_parent_key"
+        case categoryType = "category_type"
+    }
+}
+
 struct Offer: Identifiable, Codable, Equatable, Hashable {
     var id: Int { offerKey }
 
     let offerKey: Int
     let title: String
     let logoUrl: String
-    let savingsAmount: String
-    let categories: [Category]
+    let savingsAmount: String?
+    let categories: [OfferCategory]?
     let offerStore: OfferStore
-    let termsOfUse: String
-    let searchDistance: Double
+    let termsOfUse: String?
+    let searchDistance: Double?
 
     enum CodingKeys: String, CodingKey {
         case offerKey = "offer_key"
@@ -26,9 +42,9 @@ struct Offer: Identifiable, Codable, Equatable, Hashable {
 
 struct OfferStore: Codable, Equatable, Hashable {
     let name: String
-    let description: String
+    let description: String?
     let storeKey: Int
-    let physicalLocation: PhysicalLocation
+    let physicalLocation: PhysicalLocation?
 
     enum CodingKeys: String, CodingKey {
         case name, description
@@ -39,7 +55,7 @@ struct OfferStore: Codable, Equatable, Hashable {
 
 struct PhysicalLocation: Codable, Equatable, Hashable {
     let locationName: String?
-    let locationKey: Int
+    let locationKey: Int?
     let webAddress: String?
     let description: String?
     let postalCode: String?

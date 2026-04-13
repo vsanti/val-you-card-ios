@@ -186,8 +186,8 @@ private struct OfferRow: View {
                 .disabled(isRedeeming)
             }
 
-            if isExpanded, !offer.termsOfUse.isEmpty {
-                Text(offer.termsOfUse)
+            if isExpanded, let terms = offer.termsOfUse, !terms.isEmpty {
+                Text(terms)
                     .font(.caption)
                     .foregroundStyle(AppTheme.darkGrey)
             }

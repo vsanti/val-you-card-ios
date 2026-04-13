@@ -4,12 +4,12 @@ struct OfferCardView: View {
     let offer: Offer
 
     var isOnline: Bool {
-        offer.searchDistance > 1000
+        (offer.searchDistance ?? 0) > 1000
     }
 
     var formattedDistance: String? {
-        guard !isOnline, offer.searchDistance > 0 else { return nil }
-        return String(format: "%.1f mi", offer.searchDistance)
+        guard let distance = offer.searchDistance, !isOnline, distance > 0 else { return nil }
+        return String(format: "%.1f mi", distance)
     }
 
     var body: some View {
@@ -39,7 +39,7 @@ struct OfferCardView: View {
 
                 HStack {
                     VStack(alignment: .leading) {
-                        Text(offer.savingsAmount)
+                        Text(offer.savingsAmount ?? "")
                             .font(.subheadline)
                             .fontWeight(.semibold)
                         Text("Avg Savings")
